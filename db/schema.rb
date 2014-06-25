@@ -79,14 +79,22 @@ ActiveRecord::Schema.define(version: 20140625091145) do
     t.string   "layout_template"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "show_in_footer",      default: false
+    t.boolean  "show_in_header",      default: true
+    t.boolean  "show_in_footer",      default: true
+    t.boolean  "is_sticky_page",      default: false
+    t.boolean  "is_top_page",         default: false
+    t.text     "sidebar_html"
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth", using: :btree
   add_index "refinery_pages", ["id"], name: "index_refinery_pages_on_id", using: :btree
+  add_index "refinery_pages", ["is_sticky_page"], name: "index_refinery_pages_on_is_sticky_page", using: :btree
+  add_index "refinery_pages", ["is_top_page"], name: "index_refinery_pages_on_is_top_page", using: :btree
   add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft", using: :btree
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id", using: :btree
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
+  add_index "refinery_pages", ["show_in_footer"], name: "index_refinery_pages_on_show_in_footer", using: :btree
+  add_index "refinery_pages", ["show_in_header"], name: "index_refinery_pages_on_show_in_header", using: :btree
 
   create_table "refinery_resources", force: true do |t|
     t.string   "file_mime_type"
