@@ -1,6 +1,6 @@
 worker_processes 2
 
-APP_PATH = "/home/ubuntu/deploy/viicare_deploy/viicare"
+APP_PATH = "/home/ubuntu/deploy/viicare_deploy/current"
 working_directory APP_PATH
 
 listen APP_PATH + "/tmp/unicorn.viicare.sock", :backlog => 64
