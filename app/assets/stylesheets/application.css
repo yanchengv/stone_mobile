@@ -23,3 +23,5 @@
  *= require css/default
  *= require css/custom
  */
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;}
