@@ -120,7 +120,7 @@ a.read-more:hover {
 ------------------------------------*/
 /*Main Parallax Sldier*/
 .da-slide h2 i {
-	background:url(../../plugins/parallax-slider/img/bg-heading.png) repeat;
+	background:url("/asset/images/bg-heading.png") repeat;
 }
 
 /*Sequence Parallax Sldier*/
