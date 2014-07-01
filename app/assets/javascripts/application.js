@@ -17,6 +17,7 @@
 //= require js/jquery-1.10.2.min
 //= require js/jquery-migrate-1.2.1.min
 //= require js/bootstrap.min
+//= require bootstrap
 //= require js/back-to-top
 //= require js/jquery.flexslider-min
 //= require js/modernizr

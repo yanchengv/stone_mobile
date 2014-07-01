@@ -6,6 +6,9 @@
  * Website: http://htmlstream.com
 */
 
+
+
+
 var App = function () {
 
     function handleIEFixes() {
@@ -53,7 +56,7 @@ var App = function () {
         jQuery('.popovers-destroy').popover('destroy');
     }
 
-    function handleSearch() {    
+    function handleSearch() {
         jQuery('.search').click(function () {
             if(jQuery('.search-btn').hasClass('fa-search')){
                 jQuery('.search-open').fadeIn(500);
@@ -249,7 +252,7 @@ var App = function () {
 
         initParallaxBg: function () {
             jQuery('.parallaxBg').parallax("50%", 0.2);
-        },
+        }
 
     };
 
