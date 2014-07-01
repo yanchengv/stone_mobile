@@ -15,6 +15,15 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico">
 
+  <!-- JS Global Compulsory -->
+
+  <script type="text/javascript">
+      jQuery(document).ready(function() {
+          App.init();
+          App.initSliders();
+          Index.initParallaxSlider();
+      });
+  </script>
 </head>
 
 <body>
@@ -84,8 +93,9 @@
     <span class="sr-only">Toggle navigation</span>
     <span class="fa fa-bars"></span>
   </button>
-  <a class="navbar-brand" href="index.html">
-    <img id="logo-header" src="assets/img/logo1-default.png" alt="Logo">
+  <a class="navbar-brand" href="">
+    <%=image_tag "logo.png"  ,id:"logo-header" ,alt:"logo"%>
+
   </a>
 </div>
 
@@ -641,7 +651,7 @@
     <div class="thumbnails thumbnail-style thumbnail-kenburn">
       <div class="thumbnail-img">
         <div class="overflow-hidden">
-          <img class="img-responsive" src="assets/img/main/9.jpg" alt="" />
+          <img class="img-responsive" src="http://fitark.org:7500/files/74563a802f3c4109963de3c36806ba0c.jpg" alt="" />
         </div>
         <a class="btn-more hover-effect" href="#">read more +</a>
       </div>
@@ -655,7 +665,7 @@
     <div class="thumbnails thumbnail-style thumbnail-kenburn">
       <div class="thumbnail-img">
         <div class="overflow-hidden">
-          <img class="img-responsive" src="assets/img/main/10.jpg" alt="" />
+          <img class="img-responsive" src="http://fitark.org:7500/files/31e956ddb98649cfa028c2239aa86255.jpg" alt="" />
         </div>
         <a class="btn-more hover-effect" href="#">read more +</a>
       </div>
@@ -675,7 +685,7 @@
     <div class="headline"><h2>Welcome To Unify</h2></div>
     <div class="row">
       <div class="col-sm-4">
-        <img class="img-responsive margin-bottom-20" src="assets/img/main/6.jpg" alt="" />
+        <img class="img-responsive margin-bottom-20" src="http://fitark.org:7500/files/0702a6e881024bdf89b3f6a56230f6d0.jpg" alt="" />
       </div>
       <div class="col-sm-8">
         <p>Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
@@ -700,19 +710,19 @@
     <div id="myCarousel" class="carousel slide carousel-v1">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="assets/img/main/5.jpg" alt="">
+          <img src="http://fitark.org:7500/files/a54cc19f466943c788fe215c69e741cc.jpg" alt="">
           <div class="carousel-caption">
             <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
           </div>
         </div>
         <div class="item">
-          <img src="assets/img/main/4.jpg" alt="">
+          <img src="http://fitark.org:7500/files/c85455ef68f2452daf7d5849b981b8b0.jpg" alt="">
           <div class="carousel-caption">
             <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
           </div>
         </div>
         <div class="item">
-          <img src="assets/img/main/3.jpg" alt="">
+          <img src="http://www.kanbing365.com:7500/files/e410c03e78d748daa25a1fd31e02f153.jpg" alt="">
           <div class="carousel-caption">
             <p>Justo cras odio apibus ac afilisis lingestas de.</p>
           </div>
@@ -945,18 +955,7 @@
 <!--=== End Copyright ===-->
 </div><!--/wrapper-->
 
-<!-- JS Global Compulsory -->
 
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        App.init();
-        App.initSliders();
-        Index.initParallaxSlider();
-    });
-</script>
-<!--[if lt IE 9]>
-
-<![endif]-->
 
 </body>
 </html>
