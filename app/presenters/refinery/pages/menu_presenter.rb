@@ -11,18 +11,25 @@ module Refinery
       include ActiveSupport::Configurable
 
       config_accessor :roots, :menu_tag, :list_tag, :list_item_tag, :css, :dom_id,
-                      :max_depth, :selected_css, :first_css, :last_css, :list_tag_css,
-                      :link_tag_css
-      self.dom_id = 'menu'
-      self.css = 'menu clearfix'
-      self.menu_tag = :nav
+                      :max_depth, :selected_css, :first_css, :last_css, :list_first_css,
+                      :list_dropdown_css, :list_item_dropdown_css,
+                      :list_item__css, :link_dropdown_options, :carret
+
+      self.dom_id = :div
+      self.css = ["collapse", "navbar-collapse", "navbar-responsive-collapse"]
+      self.menu_tag = :div
       self.list_tag = :ul
+      self.list_first_css = ['nav', 'navbar-nav']
+      #self.carret = '<b class="caret"></b>' //用于现实导航箭头样式
+      self.carret =''
+      self.list_dropdown_css = "dropdown-menu"
+      self.link_dropdown_options = {class: "toggle-dropdown", data: {:toggle=>"dropdown"}}
       self.list_item_tag = :li
-      self.selected_css = :selected
+      self.list_item_dropdown_css = :dropdown
+      self.list_item__css = nil
+      self.selected_css = :active
       self.first_css = :first
       self.last_css = :last
-      self.list_tag_css = 'nav'
-
       def roots
         config.roots.presence || collection.roots
       end
@@ -48,7 +55,7 @@ module Refinery
 
       def render_menu_items(menu_items)
         if menu_items.present?
-          content_tag(list_tag, :class => list_tag_css) do
+          content_tag(list_tag, :class => menu_items_css(menu_items)) do
             menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
               buffer << render_menu_item(item, index)
             end
@@ -56,17 +63,22 @@ module Refinery
         end
       end
 
-      def render_menu_item_link(menu_item)
-        link_to(menu_item.title, context.refinery.url_for(menu_item.url), :class => link_tag_css)
-      end
-
       def render_menu_item(menu_item, index)
         content_tag(list_item_tag, :class => menu_item_css(menu_item, index)) do
+          @cont = context.refinery.url_for(menu_item.url)
           buffer = ActiveSupport::SafeBuffer.new
-          buffer << render_menu_item_link(menu_item)
+          if check_for_dropdown_item(menu_item)
+            buffer << link_to((menu_item.title+carret).html_safe, "#", link_dropdown_options)
+          else
+            buffer << link_to(menu_item.title, context.refinery.url_for(menu_item.url))
+          end
           buffer << render_menu_items(menu_item_children(menu_item))
           buffer
         end
+      end
+
+      def check_for_dropdown_item(menu_item)
+        (menu_item!=roots.first)&&(menu_item_children(menu_item).count > 0)
       end
 
       # Determines whether any item underneath the supplied item is the current item according to rails.
@@ -102,9 +114,20 @@ module Refinery
         [path, URI.decode(path)].include?(url) || path == "/#{item.original_id}"
       end
 
+      def menu_items_css(menu_items)
+        css = []
+
+        css << list_first_css if (roots == menu_items)
+        css << list_dropdown_css if (roots != menu_items)
+
+        css.reject(&:blank?).presence
+
+      end
+
       def menu_item_css(menu_item, index)
         css = []
 
+        css << list_item_dropdown_css if (check_for_dropdown_item(menu_item))
         css << selected_css if selected_item_or_descendant_item_selected?(menu_item)
         css << first_css if index == 0
         css << last_css if index == menu_item.shown_siblings.length
