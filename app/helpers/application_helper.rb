@@ -35,4 +35,8 @@ module ApplicationHelper
     presenter.menu_tag = :div
     presenter
   end
+
+  def sticky_pages
+    Refinery::Page.sticky_pages
+  end
 end
