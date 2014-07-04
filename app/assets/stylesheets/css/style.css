@@ -7,15 +7,24 @@
 */
 
 /*Import Global Compulsory CSS Files*/
-@import url(app.css);
-@import url(plugins.css);
+/*@import url(app.css);*/
+/*@import url(plugins.css);*/
 
 /*Import CSS Plugins*/
-@import url(animate.css);
-@import url(box-shadows.css);
+/*@import url(animate.css);*/
+/*@import url(box-shadows.css);*/
 
 /*Boxed Layout
 ------------------------------------*/
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;}
+h1, h2, h3, h4, h5, h6 {
+    color: #585f69;
+    margin-top: 5px;
+    text-shadow: none;
+    font-weight: normal;
+    font-family: 'Open Sans',Arial,"方正细圆简体","Microsoft YaHei", sans-serif;
+}
 .wrapper {
   background: #fff;
 }
