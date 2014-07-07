@@ -1,0 +1,10 @@
+defaults: &defaults
+  viicare: 'http://192.168.1.13:3000/'
+
+
+development:
+  <<: *defaults
+
+production:
+#  远程会诊视频ip
+  viicare: 'http://182.92.8.81/'

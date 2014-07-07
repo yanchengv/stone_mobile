@@ -32,6 +32,7 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'mina'
 gem 'rainbows'
+gem 'settingslogic', '~> 2.0.9'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -63,3 +64,4 @@ gem 'seo_meta', github: 'parndt/seo_meta', branch: 'master'
 gem 'paper_trail', github: 'airblade/paper_trail', branch: 'master'
 gem 'awesome_nested_set', github: 'collectiveidea/awesome_nested_set', branch: 'master'
 gem 'bootstrap-sass', '3.0.2'
+
