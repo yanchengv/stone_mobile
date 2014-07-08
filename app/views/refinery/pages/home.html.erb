@@ -59,7 +59,7 @@
 <!--=== Slider ===-->
 <div class="slider-inner">
   <div id="da-slider" class="da-slider">
-    <%for sticky_page in sticky_pages%>
+    <%for sticky_page in @sticky_pages%>
         <%if !sticky_page.content_for(:home_part1).nil?%>
             <%= raw sticky_page.content_for(:home_part1)%>
         <%end%>
@@ -75,7 +75,7 @@
 
 <!--=== Purchase Block ===-->
 
-<%for sticky_page in sticky_pages%>
+<%for sticky_page in @sticky_pages%>
     <%if !sticky_page.content_for(:home_part2).nil?%>
         <%= raw sticky_page.content_for(:home_part2)%>
     <%end%>
@@ -86,7 +86,7 @@
 <div class="container content">
 <!-- Service Blocks -->
 <div class="row margin-bottom-30">
-  <%for sticky_page in sticky_pages%>
+  <%for sticky_page in @sticky_pages%>
       <%if !sticky_page.content_for(:home_part3).nil?%>
           <%= raw sticky_page.content_for(:home_part3)%>
       <%end%>
@@ -98,7 +98,7 @@
 <!-- Recent Works -->
 <div class="headline"><h2>产品介绍</h2></div>
 <div class="row margin-bottom-20">
-  <%for sticky_page in sticky_pages%>
+  <%for sticky_page in @sticky_pages%>
       <%if !sticky_page.content_for(:home_part4).nil?%>
           <%= raw sticky_page.content_for(:home_part4)%>
       <%end%>
@@ -107,7 +107,7 @@
 <!-- End Recent Works -->
 
 <!-- Info Blokcs -->
-<%for sticky_page in sticky_pages%>
+<%for sticky_page in @sticky_pages%>
     <%if !sticky_page.content_for(:home_part5).nil?%>
         <%= raw sticky_page.content_for(:home_part5)%>
     <%end%>
@@ -119,7 +119,7 @@
 <div id="clients-flexslider" class="flexslider home clients">
   <div class="headline"><h2>客户展示</h2></div>
   <ul class="slides">
-    <%for sticky_page in sticky_pages%>
+    <%for sticky_page in @sticky_pages%>
         <%if !sticky_page.content_for(:home_part6).nil?%>
             <%= raw sticky_page.content_for(:home_part6)%>
         <%end%>
