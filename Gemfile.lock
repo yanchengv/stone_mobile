@@ -1,18 +1,18 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: 777db1d336558bd272eec519ba5ec6d5c6300056
+  revision: 6c7efd0ac557adfe7c403e6555bd99eee924c63e
   branch: master
   specs:
-    paper_trail (3.0.3.alpha)
+    paper_trail (3.0.3)
       activerecord (>= 3.0, < 5.0)
       activesupport (>= 3.0, < 5.0)
 
 GIT
   remote: git://github.com/collectiveidea/awesome_nested_set.git
-  revision: 9bdb148aef987111bfffcdf24f004f5ddd9f0441
+  revision: f823ffb304ccf5ca9c4f14b60ff1f45ad2c3f440
   branch: master
   specs:
-    awesome_nested_set (3.0.0.rc.5)
+    awesome_nested_set (3.0.0.rc.6)
       activerecord (>= 4.0.0, < 5)
 
 GIT
@@ -25,19 +25,11 @@ GIT
 
 GIT
   remote: git://github.com/norman/friendly_id.git
-  revision: 2b38a4b98065a41af9bb8ea55840e36766c3bf9b
+  revision: 97ed06e4d4c4c9a57117c1e1c3c85eba94682844
   branch: master
   specs:
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
-
-GIT
-  remote: git://github.com/parndt/refinerycms-wymeditor.git
-  revision: b9c1c9c395fde14e4fb298b6e32f632b95dfc19f
-  branch: take-2
-  specs:
-    refinerycms-wymeditor (0.0.1)
-      refinerycms-core (>= 3.0.0.dev)
 
 GIT
   remote: git://github.com/parndt/seo_meta.git
@@ -67,23 +59,23 @@ GIT
 
 GIT
   remote: git://github.com/refinery/refinerycms.git
-  revision: e6f4654e9ff9381848ba5e8501f5e92ae9f4bad9
+  revision: 47984b88a367c4fa8abe888f2bc8503931736a47
   branch: master
   specs:
-    refinerycms (3.0.0.dev)
+    refinerycms (3.0.0)
       bundler (>= 1.2.2)
-      refinerycms-authentication (= 3.0.0.dev)
-      refinerycms-core (= 3.0.0.dev)
-      refinerycms-dashboard (= 3.0.0.dev)
-      refinerycms-images (= 3.0.0.dev)
-      refinerycms-pages (= 3.0.0.dev)
-      refinerycms-resources (= 3.0.0.dev)
-    refinerycms-authentication (3.0.0.dev)
+      refinerycms-authentication (= 3.0.0)
+      refinerycms-core (= 3.0.0)
+      refinerycms-dashboard (= 3.0.0)
+      refinerycms-images (= 3.0.0)
+      refinerycms-pages (= 3.0.0)
+      refinerycms-resources (= 3.0.0)
+    refinerycms-authentication (3.0.0)
       actionmailer (>= 4.0.2, < 4.2)
       devise (~> 3.0.2)
       friendly_id (>= 5.0.0.rc1)
-      refinerycms-core (= 3.0.0.dev)
-    refinerycms-core (3.0.0.dev)
+      refinerycms-core (= 3.0.0)
+    refinerycms-core (3.0.0)
       actionpack (>= 4.0.2, < 4.2)
       activerecord (>= 4.0.2, < 4.2)
       awesome_nested_set (~> 3.0.0.rc.3)
@@ -96,24 +88,24 @@ GIT
       sass-rails (~> 4.0.0)
       truncate_html (~> 0.9)
       will_paginate (~> 3.0.2)
-    refinerycms-dashboard (3.0.0.dev)
-      refinerycms-core (= 3.0.0.dev)
-    refinerycms-images (3.0.0.dev)
+    refinerycms-dashboard (3.0.0)
+      refinerycms-core (= 3.0.0)
+    refinerycms-images (3.0.0)
       dragonfly (~> 1.0.0)
       dragonfly-s3_data_store (~> 1.0.0)
-      refinerycms-core (= 3.0.0.dev)
-    refinerycms-pages (3.0.0.dev)
+      refinerycms-core (= 3.0.0)
+    refinerycms-pages (3.0.0)
       awesome_nested_set (~> 3.0.0.rc.1)
       babosa (!= 0.3.6)
       friendly_id (~> 5.0.1)
       globalize (~> 4.0.0)
-      refinerycms-core (= 3.0.0.dev)
+      refinerycms-core (= 3.0.0)
       seo_meta (~> 2.0.0.rc.1)
-    refinerycms-resources (3.0.0.dev)
+    refinerycms-resources (3.0.0)
       acts_as_indexed (~> 0.8.0)
       dragonfly (~> 1.0.0)
       dragonfly-s3_data_store (~> 1.0.0)
-      refinerycms-core (= 3.0.0.dev)
+      refinerycms-core (= 3.0.0)
 
 GEM
   remote: http://ruby.taobao.org/
@@ -174,17 +166,18 @@ GEM
       dragonfly (~> 1.0)
       fog
     erubis (2.7.0)
-    excon (0.37.0)
-    execjs (2.2.0)
+    excon (0.38.0)
+    execjs (2.2.1)
     fog (1.22.1)
       fog-brightbox
       fog-core (~> 1.22)
       fog-json
       ipaddress (~> 0.5)
       nokogiri (~> 1.5, >= 1.5.11)
-    fog-brightbox (0.0.2)
-      fog-core
+    fog-brightbox (0.1.1)
+      fog-core (~> 1.22)
       fog-json
+      inflecto
     fog-core (1.22.0)
       builder
       excon (~> 0.33)
@@ -195,13 +188,14 @@ GEM
     fog-json (1.0.0)
       multi_json (~> 1.0)
     formatador (0.2.5)
-    globalize (4.0.1)
+    globalize (4.0.2)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.11)
+    inflecto (0.0.2)
     ipaddress (0.8.0)
-    jbuilder (2.1.1)
+    jbuilder (2.1.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.1)
@@ -219,7 +213,7 @@ GEM
       open4
       rake
     mini_portile (0.6.0)
-    minitest (5.3.5)
+    minitest (5.4.0)
     multi_json (1.10.1)
     mysql2 (0.3.16)
     net-scp (1.2.1)
@@ -261,6 +255,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    refinerycms-wymeditor (1.0.0)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     routing-filter (0.4.0.pre)
       actionpack
     sass (3.2.19)
@@ -304,7 +300,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
-    will_paginate (3.0.5)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
@@ -326,7 +322,7 @@ DEPENDENCIES
   refinerycms!
   refinerycms-acts-as-indexed!
   refinerycms-i18n!
-  refinerycms-wymeditor!
+  refinerycms-wymeditor (~> 1.0, >= 1.0.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   seo_meta!
