@@ -5,28 +5,28 @@
     <h2><%= t('.page_options') %></h2>
     <div class='field'>
         <span class='label_with_help'>
-            <%= f.label :is_sticky_page, "Show in home page" %>
+            <%= f.label :is_sticky_page, "在主页中显示" %><%= refinery_help_tag '选中后,如果此编辑页面中包含标签:home_part1,home_part2,home_part3,home_part4,home_part5,home_part6等标签,则这些标签的内容会在home首页中显示' %>
         </span>
-      <%= f.check_box :is_sticky_page %> Show this page in the home page
+       <%= f.check_box :is_sticky_page %>
     </div>
+    <!--<div class='field'>-->
+        <!--<span class='label_with_help'>-->
+            <!--<%#= f.label :is_top_page, "top page" %>-->
+        <!--</span>-->
+    <!--<%#= f.check_box :is_top_page %> Show this page in the top of home page-->
+    <!--</div>-->
     <div class='field'>
         <span class='label_with_help'>
-            <%= f.label :is_top_page, "top page" %>
+            <%= f.label :show_in_footer, "在页脚中显示" %><%= refinery_help_tag '选中后此页面会显示在页脚中'%>
         </span>
-      <%= f.check_box :is_top_page %> Show this page in the top of home page
+      <%= f.check_box :show_in_footer %>
     </div>
-    <div class='field'>
-        <span class='label_with_help'>
-            <%= f.label :show_in_footer, "Show in footer" %>
-        </span>
-      <%= f.check_box :show_in_footer %> Show this page in the footer menu
-    </div>
-    <div class='field'>
-        <span class='label_with_help'>
-            <%= f.label :show_in_header, "Show in header" %>
-        </span>
-      <%= f.check_box :show_in_header %> Show this page in the header menu
-    </div>
+    <!--<div class='field'>-->
+        <!--<span class='label_with_help'>-->
+            <!--<%#= f.label :show_in_header, "Show in header" %>-->
+        <!--</span>-->
+    <!--<%#= f.check_box :show_in_header %> Show this page in the header menu -->
+    <!--</div>-->
     <div class='field'>
       <span class='label_with_help'>
         <%= f.label :parent_id, t('.parent_page') %>

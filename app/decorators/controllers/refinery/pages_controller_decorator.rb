@@ -9,8 +9,10 @@ Refinery::PagesController.class_eval do
   end
   def menu_page_finder
     @all_menu_pages = Refinery::Page.fast_menu
+    @header_menu_pages = @all_menu_pages.where(:show_in_menu => true)
     @footer_menu_pages = @all_menu_pages.where(:show_in_footer => true)
-    @header_menu_pages = @all_menu_pages.where(:show_in_header => true)
+    # @header_menu_pages = @all_menu_pages.where(:show_in_header => true)
+
 
   end
 end
