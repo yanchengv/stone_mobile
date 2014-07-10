@@ -108,7 +108,7 @@ GIT
       refinerycms-core (= 3.0.0)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.1.1)
       actionpack (= 4.1.1)
