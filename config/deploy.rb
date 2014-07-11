@@ -14,10 +14,12 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 #   rainbows config.ru -c config/unicorn.rb -E production -D
 #   unicorn_rails -c ~/deploy/current/config/unicorn.rb -D  -E production
 
-#腾讯2服务器:
-set :domain, '182.92.8.81'
-
-set :deploy_to, 'home/ubuntu/deploy/viicare_deploy'
+#阿里服务器:
+# set :domain, '182.92.8.81'
+# set :deploy_to, '/home/ubuntu/deploy/viicare_deploy'
+#腾讯1服务器:
+set :domain, '10.162.223.103'
+set :deploy_to, '/dfs/deploy/viicare_deploy'
 #set :deploy_to, '/home/ubuntu/mimas_deploy'
 
 #华盛天成服务器
