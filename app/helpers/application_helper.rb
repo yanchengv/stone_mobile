@@ -2,13 +2,15 @@ module ApplicationHelper
 
   def header_menu
     header_menu_items = Refinery::Menu.new @header_menu_pages
-    presenter = Refinery::Pages::MenuPresenter.new(header_menu_items, self)
-    presenter.dom_id = 'menu'
-    presenter.css = 'menu clearfix'
+    presenter=CustomMenu.new(header_menu_items, self)
+    #presenter = Refinery::Pages::MenuPresenter.new(header_menu_items, self)
+    presenter.dom_id = 'div'
+    presenter.css = ["collapse", "navbar-collapse", "navbar-responsive-collapse"]
+    presenter.menu_tag=:div
     presenter.list_item_tag = :li
-    presenter.selected_css = :current
-     presenter.max_depth = 2
-    presenter.list_tag_css = 'sf-menu'
+    presenter.selected_css = :active
+    presenter.max_depth = 2
+    #presenter.list_tag_css = 'dropdown-menu'
     presenter
   end
 
