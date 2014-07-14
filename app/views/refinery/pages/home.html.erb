@@ -115,18 +115,7 @@
 
 <!-- End Info Blokcs -->
 
-<!-- Our Clients -->
-<div id="clients-flexslider" class="flexslider home clients">
-  <div class="headline"><h2>客户展示</h2></div>
-  <ul class="slides">
-    <%for sticky_page in @sticky_pages%>
-        <%if !sticky_page.content_for(:home_part6).nil?%>
-            <%= raw sticky_page.content_for(:home_part6)%>
-        <%end%>
-    <%end%>
-  </ul>
-</div><!--/flexslider-->
-<!-- End Our Clients -->
+
 </div><!--/container-->
 <!-- End Content Part -->
 
