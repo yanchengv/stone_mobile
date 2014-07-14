@@ -23,6 +23,8 @@
  * require css/parallax-slider
  * require css/default
  * require css/custom
+ * require css/feature_timeline2
+ * require css/jquery.fancybox
  *= require_tree .
  */
 ul,li{list-style:none;}
