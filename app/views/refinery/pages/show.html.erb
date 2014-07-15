@@ -1,8 +1,11 @@
 <%#= render '/refinery/content_page' %>
-
-
-<section id='title'>
-  <%#= link_to "首页", '/' %>
+<style>
+#title {color:#3498db;margin:10px 0;}
+#title a{color:#777777;}
+</style>
+<div class="container">
+<section id='title' class="pull-right">
+  <%= link_to "首页", '/' %>
   <% if !path_map.nil? %>
       <% path_map.each do |pathitem| %>
           <% if pathitem.id == @page.id %>
@@ -13,6 +16,7 @@
                   <%= pathitem.menu_title %>
               <% end %>
           <% else %>
+              >
               <% if pathitem.menu_title.nil? || pathitem.menu_title == ""  %>
                   <%= link_to pathitem.title, pathitem.url %>
               <% else %>
@@ -22,5 +26,8 @@
       <% end %>
   <% end %>
 </section>
+</div>
+<div style="clear:both;"></div>
 <%=raw @page.content_for(:body) %>
 </section>
+
