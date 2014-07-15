@@ -30,11 +30,12 @@
 #div ul,li{list-style:none;}
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;}
-#div .dropdown-menu .dropdown{float:left;border-right:1px solid #ededed}
-#div .dropdown-menu{min-width:200px;padding:5px 10px;width:620px;}
+#div .dropdown-menu li{float:left;}
+#div .dropdown-menu .dropdown{border-right:1px solid #ededed;}
+#div .dropdown-menu{min-width:200px;padding:5px 10px;width:820px;}
 #div .third_menu{margin-left:-40px}
 #div ul li a{font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;
-   font-size:16px;
+    font-size:16px;
     font-weight:600;
 }
 #div .dropdown-menu li a{border-bottom:0px;font-weight:bold;}
@@ -49,3 +50,5 @@ body {
     line-height:31px;
     border-bottom:0px;
     text-align:left;font-weight:normal;}
+#div #noThirdMenu{width:200px;clear:both;}
+#div #noThirdMenu li{clear:both;}
