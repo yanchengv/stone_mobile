@@ -4,8 +4,27 @@ class CustomMenu < Refinery::Pages::MenuPresenter
   private
   #生成ul标签
   def render_menu_items(menu_items)
+
     if menu_items.present?
-      if menu_items.first.depth==2
+      if menu_items.first.depth==1
+         @is_third_menus= Refinery::Page.is_third_menus menu_items.first.parent_id,2
+         if  @is_third_menus.empty?
+           content_tag(list_tag, :class => menu_items_css(menu_items),id:'noThirdMenu') do
+             menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
+
+               buffer << render_menu_item(item, index)
+             end
+           end
+         else
+           content_tag(list_tag, :class => menu_items_css(menu_items),id:'hasThirdMenu') do
+             menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
+               buffer << render_menu_item(item, index)
+             end
+           end
+         end
+
+
+      elsif menu_items.first.depth==2
         content_tag(list_tag, :class => 'third_menu') do
           menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
             buffer << render_menu_item(item, index)
@@ -14,6 +33,7 @@ class CustomMenu < Refinery::Pages::MenuPresenter
       else
         content_tag(list_tag, :class => menu_items_css(menu_items)) do
           menu_items.each_with_index.inject(ActiveSupport::SafeBuffer.new) do |buffer, (item, index)|
+
             buffer << render_menu_item(item, index)
           end
         end
