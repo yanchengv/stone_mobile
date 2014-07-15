@@ -7,5 +7,5 @@ development:
 
 production:
 #  远程会诊视频ip
-  viicare: 'http://182.92.8.81/'
-#  viicare: 'http://w2.viicare.com/'
+#  viicare: 'http://182.92.8.81/'
+  viicare: 'http://w2.viicare.com/'
