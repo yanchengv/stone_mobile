@@ -1,1 +1,25 @@
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>
+
+
+<section id='title'>
+  <%#= link_to "首页", '/' %>
+  <% if !path_map.nil? %>
+      <% path_map.each do |pathitem| %>
+          <% if pathitem.id == @page.id %>
+              <% if pathitem.menu_title.nil? || pathitem.menu_title == ""  %>
+                  <%= pathitem.title %>
+              <% else %>
+                  <%= pathitem.menu_title %>
+              <% end %>
+          <% else %>
+              <% if pathitem.menu_title.nil? || pathitem.menu_title == ""  %>
+                  <%= link_to pathitem.title, pathitem.url %>
+              <% else %>
+                  <%= link_to pathitem.menu_title, pathitem.url %>
+              <% end %>
+          <% end %>
+      <% end %>
+  <% end %>
+</section>
+<%=raw @page.content_for(:body) %>
+</section>
