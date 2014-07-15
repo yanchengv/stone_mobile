@@ -6,6 +6,7 @@
   <% if !path_map.nil? %>
       <% path_map.each do |pathitem| %>
           <% if pathitem.id == @page.id %>
+              >
               <% if pathitem.menu_title.nil? || pathitem.menu_title == ""  %>
                   <%= pathitem.title %>
               <% else %>
