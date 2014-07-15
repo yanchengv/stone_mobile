@@ -27,7 +27,7 @@
  * require css/jquery.fancybox
  *= require_tree .
  */
-ul,li{list-style:none;}
+#div ul,li{list-style:none;}
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;}
 #div .dropdown-menu .dropdown{float:left;border-right:1px solid #ededed}
