@@ -27,28 +27,3 @@
  * require css/jquery.fancybox
  *= require_tree .
  */
-#div ul,li{list-style:none;}
-body {
-    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;}
-#div .dropdown-menu li{float:left;}
-#div .dropdown-menu .dropdown{border-right:1px solid #ededed;}
-#div .dropdown-menu{min-width:200px;padding:5px 10px;width:820px;}
-#div .third_menu{margin-left:-40px}
-#div ul li a{font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;
-    font-size:16px;
-    font-weight:600;
-}
-#div .dropdown-menu li a{border-bottom:0px;font-weight:bold;}
-#div ul li ul li a{font-size:14px;font-weight:normal;}
-#div .third_menu li{clear:both;}
-#div ul li ul.dropdown-menu .third_menu li a{
-    margin:0;
-    width:195px;
-    padding:0px 15px;
-    display:inline-block;
-    height:31px;
-    line-height:31px;
-    border-bottom:0px;
-    text-align:left;font-weight:normal;}
-#div #noThirdMenu{width:200px;clear:both;}
-#div #noThirdMenu li{clear:both;}

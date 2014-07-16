@@ -1,18 +1,4 @@
-<!--<div class="container">-->
-<!--<h1 id='logo'>-->
-  <!--<%#= link_to Refinery::Core.site_name, refinery.root_path %>-->
-<!--</h1>-->
-<!--<%#=image_tag "logo.png"%>-->
-<!--<%#= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>-->
-  <!--<%#=header_menu.to_html%>-->
-<!--</div>-->
-<!--<script>-->
 
-<!--//    jQuery(document).ready(function(){-->
-<!--//        jQuery('ul.sf-menu').superfish();-->
-<!--//    });-->
-<!--//-->
-<!--</script>-->
 
 <div class="header">
   <!-- Topbar -->
@@ -22,10 +8,10 @@
       <ul class="loginbar pull-right">
         <li class="active">
           <!--<a href="<%#= Settings.viicare%>zh-CN">中文<i class="fa fa-check"></i></a>-->
-          <a href="<%= Settings.viicare%>zh-CN">中文</a>
+          <a href="<%= Settings.viicare%>zh-CN" style="color:#ffffff;">中文</a>
         </li>
         <li class="topbar-devider"></li>
-        <li><a href="<%= Settings.viicare%>en">ENGLISH</a></li>
+        <li><a href="<%= Settings.viicare%>en" style="color:#ffffff;">ENGLISH</a></li>
         <!--<li class="topbar-devider"></li>-->
         <!--<li><a href="<%= Settings.viicare%>refinery/users/login" target="_self">登陆</a></li>-->
       </ul>

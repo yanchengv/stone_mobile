@@ -259,7 +259,8 @@ h1, h2, h3, h4, h5, h6 {
 .header {
 	z-index: 99;
 	position: relative;
-	border-bottom: solid 2px #eee;
+	/*border-bottom: solid 2px #eee;*/
+    background:#3498db;
 }
 
 .header .navbar {
@@ -300,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header .navbar-default .navbar-nav > li > a {
-	color: #687074;
+	color: #ffffff;
 	font-size: 15px;
 	font-weight:400;
 	text-transform: uppercase;
@@ -392,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	.header .navbar-default .navbar-nav > li > a:hover,
 	.header .navbar-default .navbar-nav > .active > a {
-		border-bottom: solid 2px #72c02c;
+		/*border-bottom: solid 2px #72c02c;*/
 	}
 	
 	.header .navbar-default .navbar-nav > li > a,
@@ -419,8 +420,8 @@ h1, h2, h3, h4, h5, h6 {
 		border-radius: 0; 
 		z-index: 9999 !important;
 		margin-top: -2px !important; 
-		border-top: solid 2px #72c02c; 
-		border-bottom: solid 2px #687074; 
+		/*border-top: solid 2px #72c02c; */
+		/*border-bottom: solid 2px #687074; */
 	}
 
 	.header .dropdown-menu li a { 
@@ -431,15 +432,16 @@ h1, h2, h3, h4, h5, h6 {
 		border-bottom: solid 1px #eee;
 	}
 
-	.header .dropdown-menu .active > a,
+	.header .dropdown-menu .active > a{background:transparent;}
 	.header .dropdown-menu li > a:hover {
 		color: #fff;
 		filter: none !important;
-		background: #687074 !important;
-		-webkit-transition: all 0.1s ease-in-out;
-		-moz-transition: all 0.1s ease-in-out;
-		-o-transition: all 0.1s ease-in-out;
-		transition: all 0.1s ease-in-out;
+		background:#2282c1 !important;
+        text-decoration: none;
+		/*-webkit-transition: all 0.1s ease-in-out;*/
+		/*-moz-transition: all 0.1s ease-in-out;*/
+		/*-o-transition: all 0.1s ease-in-out;*/
+		/*transition: all 0.1s ease-in-out;*/
 	}
 
 	.header .dropdown-menu li > a:focus {
