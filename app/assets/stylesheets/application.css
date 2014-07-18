@@ -11,10 +11,10 @@
  * file per style scope.
  *
 
- *= require refinery/formatting
- *= require refinery/theme
+ * require refinery/formatting
+ * require refinery/theme
  *= require_self
- *= require_directory ./css
+ * require_directory ./css
  * require css/bootstrap.min
  * require css/style
  * require css/line-icons
