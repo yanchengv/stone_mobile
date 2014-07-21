@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     collection do
       get '/aboutus' ,to: 'pages#about'
       get '/index' ,to: 'pages#index'
+      get '/show_map',to:'pages#show_map'
     end
   end
   mount Refinery::Core::Engine, at: '/'
