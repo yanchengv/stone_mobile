@@ -6,9 +6,7 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   resource :pages do
     collection do
-      get '/aboutus' ,to: 'pages#about'
       get '/index' ,to: 'pages#index'
-      get '/show_map',to:'pages#show_map'
     end
   end
   mount Refinery::Core::Engine, at: '/'

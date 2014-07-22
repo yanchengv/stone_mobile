@@ -1,5 +1,5 @@
 defaults: &defaults
-  viicare: 'http://192.168.1.13:3000/'
+  viicare: 'http://192.168.0.10:3000/'
 
 
 development:

@@ -11,19 +11,8 @@
  * file per style scope.
  *
 
- * require refinery/formatting
- * require refinery/theme
+
  *= require_self
- * require_directory ./css
- * require css/bootstrap.min
- * require css/style
- * require css/line-icons
- * require css/font-awesome.min
- * require css/flexslider
- * require css/parallax-slider
- * require css/default
- * require css/custom
- * require css/feature_timeline2
- * require css/jquery.fancybox
+ *= require bootstrap
  *= require_tree .
  */

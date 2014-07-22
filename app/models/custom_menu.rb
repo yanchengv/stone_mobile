@@ -70,7 +70,6 @@ class CustomMenu < Refinery::Pages::MenuPresenter
   #生成li标签
   def menu_item_css(menu_item, index)
     css = []
-
     css << selected_css if selected_item_or_descendant_item_selected?(menu_item)
     css << first_css if index == 0
     css << last_css if index == menu_item.shown_siblings.length
