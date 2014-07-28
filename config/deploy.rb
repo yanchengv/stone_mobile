@@ -19,13 +19,13 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 # set :deploy_to, '/home/ubuntu/deploy/viicare_deploy'
 #腾讯1服务器:
 set :domain, '10.162.223.103'
-set :deploy_to, '/dfs/deploy/viicare_deploy'
+set :deploy_to, '/dfs/deploy/stone_deploy'
 #set :deploy_to, '/home/ubuntu/mimas_deploy'
 
 #华盛天成服务器
 #set :domain, '58.83.159.78'
 #set :deploy_to, '/home/ubuntu/deploy'
-set :repository, 'git@fitark.org:saturn/viicare.git'
+set :repository, 'git@github.com:zqalyc/stone.git'
 set :branch, 'master'
 set :term_mode, :system
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
