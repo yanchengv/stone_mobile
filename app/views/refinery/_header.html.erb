@@ -1,62 +1,21 @@
-<div data-role="header">
-  <div data-role="navbar" >
-    <ul >
-      <li ><a href="/" class="ui-btn-active" data-icon="home">首页</a></li>
-      <li><a href="#side-menu">=</a></li>
-    </ul>
-
-  </div>
-
-
+<div class="header">
+   <a href="/" class="home-b">首页</a>
+   <a href="#side-menu" class="menu-tag"></a>
+  </ul>
 </div>
+
+
 <%=side_menu.to_html%>
 <script type="text/javascript">
-    $(function() {
-        $('#side-menu').mmenu({
-            position:'right',
-            onClick: {
-                preventDefault: true
-            }
-        }, {
-            offCanvas: {
-                pageSelector: 'div[data-role="page"]:first'
-            }
-        });
+  $(function(){
+      $('#side-menu').mmenu({
+          offCanvas: {
+              position  : "right",
+              counters:true
+          }
+      })
+  })
 
-        $('#side-menu a').on(
-                'click',
-                function()
-                {
-                    var _t = this;
-                    $('#side-menu').one(
-                            'closed.mm',
-                            function()
-                            {
-                                $.mobile.changePage( _t.href, {
-                                    transition: 'slide'
-                                });
-                            }
-                    );
-                }
-        );
-    });
-
-    $(document).on(
-            'pageshow',
-            function( e, ui )
-            {
-                $('#side-menu').trigger( 'setPage', [ $(e.target) ] );
-                $('#side-menu a').each(
-                        function()
-                        {
-                            if ( $.mobile.path.parseUrl( this.href ).href == window.location.href )
-                            {
-                                $(this).trigger( 'setSelected.mm' );
-                            }
-                        }
-                );
-            }
-    );
 
 </script>
 

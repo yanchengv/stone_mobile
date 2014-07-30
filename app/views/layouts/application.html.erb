@@ -1,23 +1,23 @@
 <head>
-  <title>欢迎访问曲阳县大自然石材有限公司</title>
+  <title>曲阳县大自然石材有限公司</title>
   <%= render "/refinery/head" %>
   <%= render "/refinery/javascripts" %>
   <meta name="author" content="www.frebsite.nl" />
   <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%=csrf_meta_tags%>
 
 </head>
-
 <body id="<%= canonical_id @page %>">
 
-<div data-role="page" id="home">
-  <%= render "/refinery/header" %>
-
-  <div data-role="content">
-    <%= yield %>
+<div>
+  <div id="header">
+    <%= render "/refinery/header" %>
   </div>
+
+   <div id="page">
+     <%= yield %>
+   </div>
+
 </div>
 
 </body>
