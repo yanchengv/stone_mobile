@@ -1,10 +1,12 @@
 <!--scroll-->
+<!--
 <div class="scroll relative">
+
   <div class="scroll_box" id="scroll_img">
     <ul class="scroll_wrap">
-      <li><a href="http://www.ablanxue.com"><img src="/images/1.jpg" width="100%" /></a></li>
-      <li><a href="http://www.ablanxue.com"><img src="/images/2.jpg" width="100%" /></a></li>
-      <li><a href="http://www.ablanxue.com"><img src="/images/3.jpg" width="100%" /></a></li>
+      <li><a href="#"><img src="/images/1.jpg" width="100%" /></a></li>
+      <li><a href="#"><img src="/images/2.jpg" width="100%" /></a></li>
+      <li><a href="#"><img src="/images/3.jpg" width="100%" /></a></li>
     </ul>
   </div>
   <span class="scroll_position_bg opacity6"></span>
@@ -14,7 +16,29 @@
     <li><a href="javascript:void(0);">3</a></li>
   </ul>
 </div>
+-->
 <!--scroll-->
+
+
+<% if !@sticky_pages.nil?%>
+
+    <%for sticky_page in @sticky_pages%>
+        <%if !sticky_page.content_for(:home_part1).nil?%>
+            <%= raw sticky_page.content_for(:home_part1)%>
+        <%end%>
+    <%end%>
+
+    <div class="row margin-bottom-20">
+      <%for sticky_page in @sticky_pages%>
+          <%if !sticky_page.content_for(:home_part2).nil?%>
+              <%= raw sticky_page.content_for(:home_part2)%>
+          <%end%>
+      <%end%>
+    </div>
+
+<%end%>
+
+<!--scroll jquery-->
 <script>
     var slider = Swipe(document.getElementById('scroll_img'), {
         auto: 3000,
@@ -34,21 +58,3 @@
         });
     });
 </script>
-
-<% if !@sticky_pages.nil?%>
-
-    <%for sticky_page in @sticky_pages%>
-        <%if !sticky_page.content_for(:home_part1).nil?%>
-            <%= raw sticky_page.content_for(:home_part1)%>
-        <%end%>
-    <%end%>
-
-    <div class="row margin-bottom-20">
-      <%for sticky_page in @sticky_pages%>
-          <%if !sticky_page.content_for(:home_part2).nil?%>
-              <%= raw sticky_page.content_for(:home_part2)%>
-          <%end%>
-      <%end%>
-    </div>
-
-<%end%>
