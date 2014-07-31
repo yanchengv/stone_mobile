@@ -1,5 +1,5 @@
-# source 'http://ruby.taobao.org'
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
+#source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -84,5 +84,5 @@ gem 'seo_meta', github: 'parndt/seo_meta', branch: 'master'
 gem 'paper_trail', github: 'airblade/paper_trail', branch: 'master'
 
 gem 'awesome_nested_set', github: 'collectiveidea/awesome_nested_set', branch: 'master'
-gem 'bootstrap-sass', '3.0.2'
+#gem 'bootstrap-sass', '3.0.2'
 
