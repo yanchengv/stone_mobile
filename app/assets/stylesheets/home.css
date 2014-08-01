@@ -124,7 +124,7 @@ nav:not(.mm-menu)
     padding: 0 50px;
 }
 .header .tel{
-    float: right;
+
     background:url(telephone.png) no-repeat center center;
     display: block;
     margin-top:5px;
@@ -133,7 +133,7 @@ nav:not(.mm-menu)
     margin-right:10px;
 }
 .header .home-b{
-    float: right;
+
     background:url(home.png) no-repeat center center;
     display: block;
     margin-top:5px;
@@ -149,14 +149,14 @@ nav:not(.mm-menu)
     margin-top:5px;
     width:60px;
     height: 60px;
-   float:right;
+
     margin-right:10px;
 }
 .content
 {
     padding: 150px 50px 50px 50px;
 }
-
+.fr{float:right;}
 .fa
 {
     font-size: 17px;
@@ -189,13 +189,14 @@ html.mm-opened.mm-zoom-menu .mm-page
     background-color: #fff;
 }
 .header{
-    background:#3d4a54;
+    background:#245cc4;
     width:100%;
     height:70px;
     background-size: 100%;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    position: fixed;
+    /*position: fixed;*/
+
     z-index: 100;
     box-shadow: 0px 0px 5px #000;
 }
@@ -204,5 +205,13 @@ html.mm-opened.mm-zoom-menu .mm-page
     margin-left:15px;
     display:inline-block;
     height:auto;
-    float:left;
+
 }
+.mm-page,body{background:url(con_bg.gif);height:100%;}
+.box_con{background:#f9f9f9;border-radius:10px;width:96%;margin-left:2%;margin-bottom:10px;margin-top:10px;padding:10px 0px;}
+.img{width:45%;padding:2px;margin-left:3%;border:1px solid #dcdcdc;float:left;background:#ffffff;}
+.text{width:45%;float:left;margin-left:10px;font-size:13px;line-height:16px;}
+.pro{width:96%;margin:10px auto;}
+.line{border:1px solid #cccccc !important;box-shadow:none;margin:10px 0;}
+
+

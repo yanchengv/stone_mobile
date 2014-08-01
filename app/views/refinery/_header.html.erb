@@ -1,21 +1,25 @@
 <div class="header">
-   <a ><%=image_tag "logo.png" ,class: "logo"%></a>
-   <a href="#side-menu" class="menu-tag"></a>
-   <a href="/" class="home-b"></a>
-  <a href="/" class="tel"></a>
+  <div class="fl">
+    <a ><%=image_tag "logo.png" ,class: "logo"%></a>
+  </div>
+  <div class="fr">
+    <a href="/" class="tel fl"></a>
+    <a href="/" class="home-b fl"></a>
+    <a href="#side-menu" class="menu-tag fl"></a>
+  </div>
 </div>
 
 
 <%=side_menu.to_html%>
 <script type="text/javascript">
-  $(function(){
-      $('#side-menu').mmenu({
-          offCanvas: {
-              position  : "right",
-              counters:true
-          }
-      })
-  })
+    $(function(){
+        $('#side-menu').mmenu({
+            offCanvas: {
+                position  : "right",
+                counters:true
+            }
+        })
+    })
 
 
 </script>
