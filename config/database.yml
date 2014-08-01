@@ -28,6 +28,6 @@ production:
   reconnect: false
   database: stone_production
   pool: 5
-  username: root
-  password: '123'
-  socket: /var/run/mysqld/mysqld.sock
+  username: yancheng
+  password: '102200'
+#  socket: /var/run/mysqld/mysqld.sock
