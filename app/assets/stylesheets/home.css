@@ -195,7 +195,7 @@ html.mm-opened.mm-zoom-menu .mm-page
     background-size: 100%;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    position: fixed;
+    /*position: fixed;*/
 
     z-index: 100;
     box-shadow: 0px 0px 5px #000;
