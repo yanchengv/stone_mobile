@@ -9,4 +9,5 @@
 * jqueryMobile
 * 1.首页建立home_part1和home_part2子模块，分别导入demo.html.erb的内容
 * 2.可以恢复到2014年网站形式，把public下面的sql文件导入和system文件放在public目录下即可
+* 3.pic目录为原型截图
 <tt>rake doc:app</tt>.
